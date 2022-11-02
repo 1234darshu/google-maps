@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "4d337eee-ac7e-441a-a8c5-d8a5da7f2e53",
+		"name": "google map",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23215260"
+	},
+	"item": [
+		{
+			"name": "gogle map with json",
+			"item": [
+				{
+					"name": "Delete API",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"place_id\":\"84248bfcb839b5809f929b485f81cb78\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/maps/api/place/delete/json?key={{key}}",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"maps",
+								"api",
+								"place",
+								"delete",
+								"json"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Add API",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"location\":{\r\n\r\n        \"lat\" : -38.383494,\r\n\r\n        \"lng\" : 33.427362\r\n\r\n    },\r\n\r\n    \"accuracy\":50,\r\n\r\n    \"name\":\"Frontline house\",\r\n\r\n    \"phone_number\":\"(+91) 983 893 3937\",\r\n\r\n    \"address\" : \"29, side layout, cohen 09\",\r\n\r\n    \"types\": [\"shoe park\",\"shop\"],\r\n\r\n    \"website\" : \"http://google.com\",\r\n\r\n    \"language\" : \"French-IN\"\r\n\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}/maps/api/place/add/json?key={{key}}",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"maps",
+						"api",
+						"place",
+						"add",
+						"json"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{key}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
